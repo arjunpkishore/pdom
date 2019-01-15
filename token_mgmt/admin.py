@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from .models import verification_token
+from .models import Verification_Token
 
-admin.site.register(verification_token)
+admin.site.register(Verification_Token)
 # Register your models here.
