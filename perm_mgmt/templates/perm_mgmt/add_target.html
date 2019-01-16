@@ -1,0 +1,53 @@
+{% extends 'perm_mgmt/layout.html'%}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <h4 class="center-align blue lighten-3">Add Resource</h4>
+  </div>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+          <span class="helper-text">Enter a unique name for this api</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="description" class="materialize-textarea"></textarea>
+          <label for="description">Description</label>
+          <span class="helper-text">Enter a description for the resource</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="p_resource" type="text" class="validate">
+          <label for="p_resource">Parent Resource</label>
+          <span class="helper-text">Enter a Parent resource. Leave blank if this is a ROOT resource</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="approver" type="text" class="validate">
+          <label for="approver">Approver</label>
+          <span class="helper-text">Enter cdsid of approver. Separate multiple approvers with commas</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="p_api" type="text" class="validate">
+          <label for="p_api">API for granting permission</label>
+          <span class="helper-text">Select API to be invoked for granting access</span>
+        </div>
+      </div>
+      <div class="row right-align">
+        <button class="btn waves-effect waves-light btn-large " type="submit" name="action">Submit
+          <i class="material-icons right"></i>
+        </button>
+      <div>
+    </form>
+  </div>
+</div>
+{% endblock %}

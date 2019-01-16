@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 # Application definition
 
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     'faux_fim',
     'token_mgmt',
     'app_logger',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, intial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/adds.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <title>Permissions Management System</title>
 </head>
@@ -12,12 +13,18 @@
   <header class="container center-align">
     <h1>Permissions Management Sysem</h1>
   </header>
-  <div class="container">
-    {% block content %}
-    {% endblock %}
-  </div>
-  <footer>
-    <a class="center-align" href="/admin">Admin</a>
+  <main>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </main>
+  <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+          <a class="grey-text text-lighten-4 right" href="/admin">Admin</a>
+        </div>
+      </div>
   <footer>
 </body>
 </html>

@@ -1,0 +1,49 @@
+{% extends 'perm_mgmt/layout.html'%}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <h4 class="center-align blue lighten-3">Add API</h4>
+  </div>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+          <span class="helper-text">Enter a unique name for this api</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="token" type="text" class="validate">
+          <label for="token">API Token</label>
+          <span class="helper-text">Enter API Token</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="headers" class="materialize-textarea"></textarea>
+          <label for="headers">Request Header</label>
+          <span class="helper-text" data-error="wrong" data-success="right">Enter Content for Request header</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="r_body" class="materialize-textarea"></textarea>
+          <label for="r_body">Request Body</label>
+          <span class="helper-text">Enter Content for Request body</span>
+        </div>
+      </div>
+      <div class="row right-align">
+
+          <button class="btn waves-effect waves-light btn-large " type="submit" name="action">Submit
+            <i class="material-icons right"></i>
+          </button>
+
+      <div>
+    </form>
+  </div>
+</div>
+{% endblock %}
