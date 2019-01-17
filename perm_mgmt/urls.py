@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^add-api', views.add_api, name='add_api'),
     url(r'^request-access', views.request_access, name='request_access'),
     url(r'^add-resource', views.add_target, name='add_target'),
+    url(r'^request-received', views.req_received, name='req_received'),
 ]
