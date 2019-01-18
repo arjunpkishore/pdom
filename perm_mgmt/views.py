@@ -29,8 +29,8 @@ def req_received(request):
 
 #@login_required
 def add_api(request):
-    if not request.user.is_authenticated:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    #if not request.user.is_authenticated:
+    #    return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     if request.method == 'POST':
         form = Permission_Api_Form(request.POST)
         if form.is_valid():
@@ -47,7 +47,10 @@ def add_api(request):
         form = Permission_Api_Form
     return render(request, 'perm_mgmt/permission_api.html', {'form':form})
 
+#@login_required
 def request_access(request):
+    #if not request.user.is_authenticated:
+    #    return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     if request.method == 'POST':
         form = Make_Request_Form(request.POST)
         if form.is_valid():
@@ -59,6 +62,8 @@ def request_access(request):
 
 
 def add_target(request):
+#    if not request.user.is_authenticated:
+#        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     if request.method == 'POST':
         form = Create_Resource_Form(request.POST)
         if form.is_valid():
